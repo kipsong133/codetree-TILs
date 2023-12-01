@@ -5,7 +5,7 @@ def solution():
     b = input_arr[1]
     c = input_arr[2]
 
-    minimum = float("inf")
+    minimum = a
     for num in input_arr:
         if minimum > num:
             minimum = num
