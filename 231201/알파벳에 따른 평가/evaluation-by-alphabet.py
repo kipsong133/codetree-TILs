@@ -11,6 +11,6 @@ def converFrom(key: str):
         "C": "Usually",
         "D": "Effort"
     }
-    return dic.get(key, "faliure")
+    return dic.get(key, "Failure")
 
 solution()
