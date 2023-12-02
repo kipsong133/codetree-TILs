@@ -1,8 +1,11 @@
 def solution():
-    input_arr = list(map(int, input().split(" ")))
+    input_arr = list(int, input().split(" "))
+    a = input_arr[0]
+    b = input_arr[1]
+    c = input_arr[2]
 
     maximum = -100
-    for num in input_arr:
+    for num in [a, b, c]:
         if num > maximum:
             maximum = num
     
