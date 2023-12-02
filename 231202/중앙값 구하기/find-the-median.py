@@ -1,8 +1,8 @@
 def solution():
     input_arr = list(map(int, input().split()))
 
-    minimum = float("inf")
-    maximum = float("-inf")
+    minimum = 100
+    maximum = -100
 
     for num in input_arr:
         if num >= maximum:
