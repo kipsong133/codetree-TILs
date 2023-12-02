@@ -11,7 +11,7 @@ def solution():
     if month < 9:
         print("Summer")
         return
-    if month < 11:
+    if month < 12:
         print("Fall")
         return
     else:
