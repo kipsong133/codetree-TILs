@@ -7,7 +7,6 @@ def solution():
     for num in input_arr:
         if num >= maximum:
             maximum = num
-            continue
         if num <= minimum:
             minimum = num
         
