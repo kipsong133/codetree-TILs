@@ -5,7 +5,7 @@ def solution():
     fin = score_arr[1]
 
     # Condition 1: Midterm Exam got more than 90 score
-    if mid < 90:
+    if mid < 90 and fin < 90:
         print(0)
         return
 
