@@ -6,7 +6,9 @@ def solution():
     i = 1
     while i < n+1:
         str_i = str(i)
-        if str_i[0] == '3' or str_i[0] == '6' or str_i[0] == '9':
+        pos = len(str_i) - 1
+        first_digit = str_i[pos]
+        if first_digit == '3' or first_digit == '6' or first_digit == '9':
             print(0, end = ' ')
             i += 1
             continue
