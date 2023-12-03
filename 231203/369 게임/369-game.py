@@ -8,6 +8,7 @@ def solution():
         if is_multiple_3(n_index):
             print(0, end = ' ')
             n_index += 1
+            continue
 
         str_n = str(n_index) # '12'
         if has_369(str_n):
