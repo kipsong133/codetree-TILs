@@ -1,7 +1,10 @@
 def solution():
     # input: 13 50
     input_arr = list(map(int, input().split()))
-    a = input_arr[0]
+    
+    # sorting 
+    input_arr.sort()
+    a = input_arr[0] 
     b = input_arr[1]
 
     sum_val = 0
