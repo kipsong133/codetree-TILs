@@ -11,8 +11,7 @@ def solution():
                 print(0)
                 n_index += 1
                 continue
-
-        # Iteration str_n
+                # Iteration str_n
         for i in range(0, len(str_n) - 1):
             digit_str = str_n[i]
             if digit_str == '3' or digit_str == '6' or digit_str == '9':
@@ -20,6 +19,8 @@ def solution():
                 print(0, end = ' ')
                 n_index += 1
                 continue
+
+
         print(n_index, end = ' ')
         n_index += 1
 
