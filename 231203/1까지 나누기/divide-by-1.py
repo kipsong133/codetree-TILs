@@ -9,7 +9,7 @@ def solution():
     temp = n
     # Iteration: 1 ~ n
     for divider in range(1, n + 1):
-        if temp =< 1: 
+        if temp <= 1: 
             break
 
         temp = int(temp / divider) # 50 
