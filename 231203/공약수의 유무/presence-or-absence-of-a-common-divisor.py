@@ -8,9 +8,8 @@ def solution():
     common = set()
     for num in range(1, 1920+1):
         if 1920 % num == 0 and 2880 % num == 0:
-            common.append(num)
-    print(common)
-    
+            common.add(num)
+
     # Iteration: a ~ b
     for num in range(a, b + 1):
         # Condition: common divisor 1920 and 2880
