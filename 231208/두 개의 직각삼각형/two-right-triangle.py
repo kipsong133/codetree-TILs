@@ -11,7 +11,7 @@ def solution():
     # ' ': (2 * i) 개
 
     # Iteration: lines
-    for line in range(4, 0, -1):
+    for line in range(n, 0, -1):
         # Iteration: star
         for star in range(line):
             print('*', end = '')
