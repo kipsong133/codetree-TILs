@@ -1,23 +1,10 @@
-n, m = list(map(int, input().split()))
-
-def find_lcm(n: int, m: int) -> int:
-    result: list[int] = []
-    min_value: int = min(n, m)
-    for i in range(2, min_value + 1):
-        if n % i == 0 and m % i == 0:
-            n = n // i
-            m = m // i 
-            result.append(i)
-            continue
-        if i == min_value:
-            result.append(n)
-            result.append(m)
-    
-    mutiple_value: int = 1 
-    
-    for i in result:
-        mutiple_value = mutiple_value * i
-    return mutiple_value
+def lcm(n,m):
+    v = 0
+    for i in range(1,min(n,m)+1):
+        if n%i == 0 and m%i == 0:
+            v = i
+    print(n*m//v)
 
 
-print(find_lcm(n, m))
+n,m = map(int,input().split())
+lcm(n,m)
