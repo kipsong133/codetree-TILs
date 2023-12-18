@@ -16,12 +16,10 @@ def solution():
     # 4's multiple
 
     if is_mutiple_100(y):
+        # 4 mutiple & not 100 multiple
+        if is_mutiple_400(y):
+            return True
         return False
-
-    # 4 mutiple & not 100 multiple
-    if is_mutiple_400(y):
-        return False
-
     # 4 multiple & not 100 multiple & 400 mutiple
     return True
 
