@@ -16,4 +16,5 @@ def solution():
     for i in range(a, b + 1):
         if is_prime(i):
             result += i
-    print(result)
+    print(result)   
+solution()
