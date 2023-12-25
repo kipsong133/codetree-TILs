@@ -36,6 +36,10 @@ def solution():
             result = add(x, y)
         case "-":
             result = substract(x, y)
+        case _:
+            print("False")
+            return 
+
     
     print(f"{x} {operator} {y} = {result}")
 
