@@ -7,8 +7,12 @@ def is_magic_number(x: int) -> bool:
     if first == 5:
         return False
 
-    if x % 3 == 0 and x % 9 == 0:
+    if x % 3 == 0:
         return False
+
+    if x % 9 != 0:
+        return False
+
     return True
 
 
