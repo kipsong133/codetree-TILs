@@ -13,7 +13,7 @@ def unique_num(num: int):
 
 def recursive(a: int, b: int):
   global cnt
-  if a >= b:
+  if a > b:
       return
   sum_result = sum_position(a)
   if sum_result % 2 == 0 and unique_num(a):
