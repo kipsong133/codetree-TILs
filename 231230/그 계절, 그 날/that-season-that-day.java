@@ -45,8 +45,10 @@ public class Main {
         int date = Integer.parseInt(input[2]);
 
         // validate input & leapyear
-        if (!validateInput(year, month, date))
+        if (!validateInput(year, month, date)) {
             System.out.println("-1");
+            return;
+        }
         
         // print Seanson
         String seanson = Seanson.chooseSeaonFrom(year);
