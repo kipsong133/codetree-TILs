@@ -20,6 +20,9 @@ def has_date(m: int, d: int) -> bool:
     has_31 = {
         1, 3, 5, 7, 8, 10 ,12
     }
+    if m == 2:
+        return d < 29
+
     if d == 31:
         return m in has_31
     return True
