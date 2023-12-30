@@ -25,12 +25,28 @@ public class Main {
     }
 
     public static boolean validateInput(int y, int m, int d) {
-        if (m == 2 && d > 28) { // 29
-            return isLeapYear(y);
-        }
         boolean isValidYear = (y >= 1 && y <= 3000);
         boolean isValidMonth = (m >= 1 && m <= 12);
         boolean isValidDate = (d >= 1 && d <= 31);
+
+        if (m == 2 && d > 28) { // 29
+            return isLeapYear(y);
+        }
+
+        // 31 months check
+        Set<Integer> month31 = new HashSet<>();
+        month31.add(1);
+        month31.add(3);
+        month31.add(5);
+        month31.add(7);
+        month31.add(8);
+        month31.add(10);
+        month31.add(12);
+        if (d == 31) {
+            if (!month31.contains(m))
+                return false;
+        }
+        
         return isValidYear && isValidMonth && isValidDate;
     }
 
