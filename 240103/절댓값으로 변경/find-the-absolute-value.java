@@ -1,21 +1,30 @@
-import java.util.*;
-import java.util.stream.IntStream;
+import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        // input
-        Scanner sc = new Scanner(System.in);
-        int cnt = sc.nextInt();
-        int[] arr = new int[cnt];
-        for (int i = 0; i < cnt; i++) {
-            arr[i] = sc.nextInt();
-        }  
-        IntStream stream = Arrays.stream(arr);
-        stream
-            .map(e -> Math.abs(e))
-            .forEach(e -> System.out.print(e + " "));
-            
-
+public class Main {    
+    public static final int MAX_N = 50;
+    
+    public static int n;
+    public static int[] arr = new int[MAX_N];
+    
+    // 배열의 값들을 그 값의 절대값으로 변경합니다.
+    // call by reference로 구현합니다.
+    public static void absoluteValue(int[] arr) {
+        for(int i = 0; i < n; i++)
+            if(arr[i] < 0)
+                arr[i] = -arr[i];
         
+        return;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        for(int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
+
+        absoluteValue(arr);
+        
+        for(int i = 0; i < n; i++)
+            System.out.print(arr[i] + " ");
     }
 }
