@@ -1,30 +1,21 @@
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.IntStream;
 
-public class Main {    
-    public static final int MAX_N = 50;
-    
-    public static int n;
-    public static int[] arr = new int[MAX_N];
-    
-    // 배열의 값들을 그 값의 절대값으로 변경합니다.
-    // call by reference로 구현합니다.
-    public static void absoluteValue(int[] arr) {
-        for(int i = 0; i < n; i++)
-            if(arr[i] < 0)
-                arr[i] = -arr[i];
-        
-        return;
-    }
-
+public class Main {
     public static void main(String[] args) {
+        // input
         Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        for(int i = 0; i < n; i++)
+        int cnt = sc.nextInt();
+        int[] arr = new int[cnt];
+        for (int i = 0; i < cnt; i++) {
             arr[i] = sc.nextInt();
+        }
 
-        absoluteValue(arr);
-        
-        for(int i = 0; i < n; i++)
-            System.out.print(arr[i] + " ");
+        // 배열을 스트림으로 변환하고, 절대값을 계산하여 출력
+        Arrays.stream(arr)
+              .map(Math::abs) // 각 요소의 절대값 계산
+              .forEach(e -> System.out.print(e + " ")); // 결과를 공백과 함께 출력
+
+        sc.close(); // Scanner 닫기
     }
 }
