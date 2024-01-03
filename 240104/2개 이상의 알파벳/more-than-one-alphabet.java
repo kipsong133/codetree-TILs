@@ -1,29 +1,31 @@
 import java.util.Scanner;
-import java.util.*;
 
 public class Main {
-    public static boolean duplicateAlphabat(String text) {
-        // 서로 다른 알파뱃의 갯수 플래그 변수
-        int cnt = 0;
-        Set<Character> set = new HashSet<>();
-        // Iteration: String 의 각 문자
-        for (int i = 0; i < text.length(); i++) {
-            
-            char indexedChar = text.charAt(i);
-            if (!set.contains(indexedChar))
-                cnt += 1;
-                set.add(indexedChar);
-        }
-        return (cnt > 1);
-    }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String text = sc.next();
+	public static boolean isMoreTwoApl(String text) {
 
-        if (duplicateAlphabat(text))
-            System.out.print("Yes");
-        else
-            System.out.print("No");
-    }
+		int len = text.length();
+		for (int i = 0; i < len; i++) {
+			if (text.charAt(i) != text.charAt(0))
+				return true;
+
+		}
+		return false;
+	}
+
+
+	public static void main(String[] args) {
+		// input
+		Scanner sc = new Scanner(System.in);
+		String text = sc.next();
+
+
+		// validate
+		if (isMoreTwoApl(text))
+			System.out.print("Yes");
+		else
+			System.out.print("No");
+
+
+	}
 }
