@@ -1,14 +1,11 @@
-cnt = 0
+n = int(input())
 
-def solution(num: int):
-    global cnt
-    if num <= 1: return cnt
-    cnt += 1
-    if num % 2 == 0:
-        return solution(int(num / 2))
+def count_number(a):
+    if a == 1: return 0
+
+    if a % 2 == 0:
+        return count_number(a // 2) + 1
     else:
-        return solution(num * 3 + 1)
+        return count_number(a * 3 + 1) + 1
 
-# input
-n = int(input()) # 3
-print(solution(n))
+print(count_number(n))
