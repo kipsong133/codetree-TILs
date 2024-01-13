@@ -1,22 +1,28 @@
-def gcd(x, y):
-    """두 수의 최대공약수를 구하는 함수"""
-    if y == 0:
-        return x
-    else:
-        return gcd(y, x % y)
+# 변수 선언 및 입력:
+n = int(input())
+arr = [0] + list(map(int, input().split()))
 
-def lcm(x, y):
-    """두 수의 최소공배수를 구하는 함수"""
-    return x * y // gcd(x, y)
 
-def lcm_multiple(numbers, index=0):
-    """재귀를 사용하여 여러 수의 최소공배수를 구하는 함수"""
-    if index == len(numbers) - 1:
-        return numbers[index]
-    else:
-        return lcm(numbers[index], lcm_multiple(numbers, index + 1))
+# 두 수간의 최소공배수를 구하여 반환합니다.
+def lcm(a, b):
+    gcd = 1
+    for i in range(1, min(a, b) + 1):
+        if a % i == 0 and b % i == 0:
+            gcd = i
 
-count = int(input())
-numbers = list(map(int, input().split()))
-result = lcm_multiple(numbers)
-print(result)
+    return a * b // gcd
+
+
+# index번째 까지 인덱스의 숫자 중에 가장 큰 값을 반환합니다.
+def get_lcm_all(index):
+    # 남은 원소가 1개라면 그 자신이 답이 됩니다.
+    if index == 1:
+        return arr[1]
+
+    # 1번째 ~ index - 1번째 원소의 최소공배수를 구한 결과와
+    # 현재 index 원소의 최소공배수를 구하여 반환합니다.
+    return lcm(get_lcm_all(index - 1), arr[index])
+
+   
+# 모든 수의 최소공배수를 구합니다.
+print(get_lcm_all(n))
