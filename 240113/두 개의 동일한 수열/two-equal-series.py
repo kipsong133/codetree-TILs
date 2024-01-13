@@ -10,6 +10,6 @@ def solution():
         if arr_a[i] != arr_b[i]:
             print("No")
             return
-print("Yes")
+    print("Yes")
 
 solution()
