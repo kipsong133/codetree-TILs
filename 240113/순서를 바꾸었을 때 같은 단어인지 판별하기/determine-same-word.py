@@ -4,6 +4,10 @@ str_a.sort()
 str_b.sort()
 
 def can_make():
+    if len(str_a) != len(str_b):
+        print("No")
+        return
+
     for i in range(len(str_a)):
         if str_a[i] != str_b[i]:
             print("No")
