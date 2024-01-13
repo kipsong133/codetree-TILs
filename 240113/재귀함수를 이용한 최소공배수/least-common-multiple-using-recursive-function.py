@@ -12,4 +12,4 @@ def lcm_all(index: int):
 
 n = int(input())
 arr = list(map(int, input().split()))
-print(lcm_all(5))
+print(lcm_all(n-1))
