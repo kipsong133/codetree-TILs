@@ -1,17 +1,5 @@
-str_a = list(input())
-str_b = list(input())
-str_a.sort()
-str_b.sort()
+str1 = input()
+str2 = input()
 
-def can_make():
-    if len(str_a) != len(str_b):
-        print("No")
-        return
-
-    for i in range(len(str_a)):
-        if str_a[i] != str_b[i]:
-            print("No")
-            return
-    print("Yes")
-
-can_make()
+# 각 문자열을 정렬했을 때 두 문자열이 일치하는지 비교합니다.
+print("Yes" if sorted(str1) == sorted(str2) else "No")
