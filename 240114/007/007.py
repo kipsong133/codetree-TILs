@@ -6,8 +6,8 @@ class Message:
         self.space = space
         self.time = time
 
-input_data = tuple(input().split())
-message = Message(input_data[0], input_data[1], input_data[2])
+code, point, time = tuple(input().split())
+message = Message(code, point, time)
 print(f"secret code : {message.code}")
 print(f"meeting point : {message.space}")
 print(f"time : {message.time}")
