@@ -1,25 +1,22 @@
-# 변수 선언 및 입력
+# input
 n, k, t = tuple(input().split())
-n, k = int(n), int(k)
+n = int(n)
+k = int(k)
 
+# pattern을 가진 단어인지 확인한다.
+def star_with(word: str, pattern: str) -> bool:
+	# 단어 길이가 애초에 pattern보다 작으면 안된다.
+	if len(word) < len(pattern): return False
 
-# a가 b로 시작하는지를 확인합니다.
-def starts_with(a, b):
-    # b의 길이가 더 길 수는 없습니다.
-    if len(a) < len(b):
-        return False
-    
-    # b의 길이만큼 살펴보며, a와 문자열이 완벽히 동일한지 확인합니다.
-    return a[:len(b)] == b
+	# word를 pattern의 길이만큼 슬라이싱해서 확인한다.
+	return word[:len(pattern)] == pattern
 
-
-words = []
+# input: n 개의 단어를 받는다. 조건을 확인한다.
+words: [str] = []
 for _ in range(n):
-    word = input()
-    if starts_with(word, t):
-        words.append(word)
+	word = input()
+	if star_with(word, t):
+		words.append(word)
 
-# 정렬을 진행합니다.
 words.sort()
-
-print(words[k - 1])
+print(words[k-1])
