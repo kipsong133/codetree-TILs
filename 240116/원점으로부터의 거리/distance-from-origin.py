@@ -1,5 +1,5 @@
 def get_distance(x: int, y: int) -> int:
-    return int((x**2 + y**2)**(0.5))
+    return abs(x - 0) + abs(y - 0)
 
 # input
 N = int(input())
@@ -12,6 +12,6 @@ while True:
     index = len(points) + 1
     points.append((int(x), int(y), distance, index))
 
-points.sort(key=lambda x: x[2])
+points.sort(key=lambda x: (x[2], x[3]))
 for p in points:
     print(p[3])
