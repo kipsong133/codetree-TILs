@@ -14,8 +14,8 @@ def count_days(m1, d1, m2, d2, elapsed_day):
         m1 += 1
         d1 = 0
 
-    return count_days(m1, d1+1, m2, d2, elapsed_day + 1)
+    return count_days(m1, d1+1, m2, d2, elapsed_day+1)
     
 
 # output
-print(count_days(m1, d1, m2, d2, 0))
+print(count_days(m1, d1, m2, d2, 1))
