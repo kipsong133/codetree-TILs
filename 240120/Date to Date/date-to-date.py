@@ -6,6 +6,7 @@ num_of_days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 # simulating
 # m1.d1 -> m2.d2
 # elapsed_day = 0
+
 def count_days(m1, d1, m2, d2, elapsed_day): 
     if m1 == m2 and d1 == d2:
         return elapsed_day
@@ -18,4 +19,7 @@ def count_days(m1, d1, m2, d2, elapsed_day):
     
 
 # output
-print(count_days(m1, d1, m2, d2, 1))
+if m1 == m2 and d1 == d2:
+    print(1)
+else:
+    print(count_days(m1, d1, m2, d2, 0))
