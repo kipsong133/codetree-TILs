@@ -19,6 +19,14 @@ def get_num_of_min(day, hour, minute):
 
 
 # ouput
-start_min = get_num_of_min(11, 11, 11)
-end_min = get_num_of_min(a, b, c)
-print(end_min - start_min)
+def solution():
+    start_min = get_num_of_min(11, 11, 11)
+    end_min = get_num_of_min(a, b, c)
+
+    if end_min < start_min:
+        print(-1)
+        return
+
+    print(end_min - start_min)
+
+solution()
