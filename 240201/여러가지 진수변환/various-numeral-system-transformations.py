@@ -1,8 +1,7 @@
 # input
-n, b = tuple(map(int, input().split()))
+n , b = tuple(map(int, input().split()))
 digits = []
 
-# 이진수로 변환합니다.
 while True:
     if n < b:
         digits.append(n)
@@ -12,4 +11,4 @@ while True:
     n //= b
 
 for digit in digits[::-1]:
-    print(digit, end ="")
+    print(digit, end = "")
